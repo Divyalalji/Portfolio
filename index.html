@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5e93b8cccf.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./images/portfolio.ico">
+    <style>
+        .bd {
+            background-image: url(./images/background\ pic.png);
+            position: absolute;
+            z-index: 1;
+        }
+        .txt {
+       width: 100px;
+    height: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 2;
+    text-align: center;
+    transition: transform 250ms;
+         }
+        
+        .txt:hover {
+          transform: translateY(-10px);
+          color: white;
+        }
+
+        .hov {
+            font-size: 1em;
+            color: whitesmoke;
+            margin-left: 30%;
+            padding-top: 10%;
+
+        }
+
+        .home {
+
+            font-size: 1em;
+            color: whitesmoke;
+            margin-left: 80%;
+            padding-top: 10%;
+
+        }
+
+        .vd {
+            justify-content: space-between;
+            display: flex;
+        }
+
+        .vd1 {
+            color: whitesmoke;
+            font-size: 1em;
+            margin-left: -1rem;
+            
+        }
+
+        .vd2 {
+            margin-left: -107%;
+        }
+
+        .vd3 {
+            margin-left: -218%;
+        }
+
+        .vd4 {
+            margin-left: -333%;
+        }
+
+        .name {
+            margin-left: 60px;
+        }
+
+        .con {
+            color: white;
+            margin-top: 20em;
+            margin-left: 3em;
+            font-size: 1.35vw;
+        }
+
+        .h {
+            font-size: 90px;
+            color: white;
+            font-weight: 600;
+            margin-top: 12%;
+            margin-left: 53%;
+            text-decoration: underline;
+        }
+
+        .line {
+            border: 1px;
+            border-color: #7a7a7a;
+            border-style: solid;
+            text-align: center;
+            padding: 5%;
+        }
+
+        .line1 {
+            margin-left: 28.2%;
+            width: 85.6%;
+            margin-top: 14%;
+            background-color: #000;
+            color: white;
+        }
+
+        .line3 {
+            border: 1px;
+            border-color: #7a7a7a;
+            border-style: solid;
+            margin-top: 14%;
+            margin-left: 28.2%;
+            width: 85.6%;
+            padding: 5%;
+            background-color: #000;
+
+        }
+
+        .line2 {
+            text-align: left;
+            padding-top: 2%;
+            color: white;
+            font-size: 1.2em;
+
+        }
+
+        .btn {
+            border: 2px;
+            border-color: #61ce70;
+            border-style: solid;
+            padding-left: 5%;
+            padding-right: 5%;
+            color: #61ce70;
+            background-color: #000;
+            margin-top: 5%;
+        }
+
+        .btn:hover {
+            color: #000;
+            background-color: #61ce70;
+        }
+
+        .pc {
+            width: 40em;
+            height: 25em;
+            margin-left: 10.3%;
+            margin-top: 18%;
+        }
+
+        .edu {
+            border: 1px;
+            background-color: #000;
+            border-style: solid;
+            margin-left: 28em;
+            border-color: #7a7a7a;
+            padding: 2.5em;
+            width: 50%;
+            text-align: center;
+            margin-top: 5em;
+        }
+
+        .year {
+            color: #61ce70;
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        .fon {
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .mob {
+            border: 1px;
+            border-style: solid;
+            border-color: #7a7a7a;
+            text-align: center;
+            padding: 5%;
+            margin-left: 28.5%;
+            width: 40%;
+            background-color: #000;
+        }
+
+        .mobright {
+            position: absolute;
+            border: 1px;
+            border-style: solid;
+            border-color: #7a7a7a;
+            text-align: center;
+            padding: 5%;
+            margin-left: 74%;
+            width: 40%;
+            background-color: #000;
+        }
+
+        .msg {
+            margin-left: 19rem;
+            margin-top: 10rem;
+        }
+
+        .msg1 {
+            border: 1px;
+            border-style: solid;
+            border-color: #7a7a7a;
+            background-color: #000;
+        }
+
+        .footer {
+            padding: 0;
+            position: fixed;
+            bottom: 50px;
+            left: 50px;
+            right: 50px;
+            width: auto;
+            height: 1px;
+            z-index: 99;
+        }
+
+        .footer .copy {
+            margin: 2px 0 0;
+            font-size: 14px;
+            line-height: 2;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        .footer .foo {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            float: right;
+            width: 24px;
+        }
+
+        .foo1 {
+            padding-right: 75px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            color: #bbb;
+            font-size: 1.2rem;
+            line-height: 24px;
+            height: 24px;
+            white-space: nowrap;
+            transform-origin: 100% 0;
+            text-align: right;
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+        }
+
+        .fa-brands:hover {
+            color: #61ce70;
+        }
+        
+        .ty {
+            margin-left: 4%;
+            font-size: 4.5vw;
+            text-decoration: none;
+            color: #fff;
+            padding-top: 10em;
+        }
+
+        * {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body class="bd">
+    <!-- this is Navbar-->
+    <div class="n">
+        <nav class="navbar navbar-expand-lg" style=" background: transparent; width: 100%; position: fixed;">
+            <div class="vd">
+                <a class="hov name txt" href="#"> Divya Lalji </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item home">
+                        <a class="nav-link home txt" aria-current="page" href="#Resume">Resume</a>
+                    </li>
+                    <li class="nav-item hov">
+                        <a class="nav-link vd1 txt" href="#Education"> Education </a>
+
+                    </li>
+                    <li class="nav-item hov">
+                        <a class="nav-link vd1 vd2 txt" href="#skills">Skills</a>
+
+                    </li>
+                    <li class="nav-item hov">
+                        <a class="nav-link vd1 vd3 txt" href="#Project">Project</a>
+
+                    </li>
+                    <li class="nav-item hov">
+                        <a class="nav-link vd1 vd4 txt" href="#Contacts">Contacts</a>
+
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!--written content-->
+    <div style="display: flex; flex-direction: row;">
+        <div><img class="pc" src="./images/final pic.png"></div>
+        <div class="con">
+            Hello,I'm <strong style="color: #61ce70;"> Divya Lalji </strong>
+            <p>Full Stack Developer</p>
+        </div>
+    </div>
+    <!--This is Typewriter-->
+
+    <h1>
+        <a href="#" class="typewrite ty" data-period="2000"
+            data-type='[ "I Code Cool Websites.", "I Develop Website Designs", "I am Programmer.", "I Love to Develop Designs" ]'>
+            <span class="wrap"></span>
+        </a>
+    </h1>
+
+    <!--Resume-->
+    <div id="Resume">
+        <h1 class="h">Resume</h1>
+        <!--Introduction-->
+        <div class="line1">
+            <div class="line">Hello! I'm Divya Lalji. I have rich experience in web site design and building.
+                <!-- 1st flex-->
+                <div style="display: flex; margin-top: 5%;">
+                    <div style="text-align: center;"><span style="color: #61ce70; font-weight:bold;">Age:</span> 24
+                    </div>
+                    <div style="margin-left: 26%;"><span style="color: #61ce70; font-weight:bold;">Residence:</span>
+                        Bhopal (M.P)</div>
+                </div>
+                <!-- 2nd flex-->
+                <div style="display: flex; margin-top: 2%;">
+                    <div style="text-align: center;"><span style="color: #61ce70; font-weight:bold;">Mobile No.:</span>
+                        9755882791 </div>
+                    <div style="margin-left: 10%;"><span style="color: #61ce70; font-weight:bold;">Email:</span>
+                        divyalalji456@gmail.com</div>
+                </div>
+                <button class="btn">Download CV</button>
+            </div>
+        </div>
+    </div>
+    <!--Education Section -->
+    <div id="Education">
+        <h1 class="h">Education</h1>
+        <!--M.tech-->
+        <div class="edu">
+            <div class="year">2021-2023</div>
+            <div class="fon">Master of Technology in Computer Science</div>
+            <div class="fon">Technocrats Institute of Technology-Excellence</div>
+            <div class="fon">Bhopal (M.P)</div>
+        </div>
+        <!--B.tech-->
+        <div class="edu">
+            <div class="year">2017-2020</div>
+            <div class="fon">Bachelor of Engineering in Information Technology</div>
+            <div class="fon">University Institute of Technology RGPV</div>
+            <div class="fon">Bhopal (M.P)</div>
+        </div>
+        <!--Diploma of Engineering-->
+        <div class="edu">
+            <div class="year">2014-2017</div>
+            <div class="fon">Diploma of Engineering</div>
+            <div class="fon">S. V. Polytechnic College</div>
+            <div class="fon">Bhopal (M.P)</div>
+        </div>
+    </div>
+    <!-- Skills Section -->
+    <div id="skills">
+        <h1 class="h" style="margin-left: 6.5em;">Skills</h1>
+        <div class="line3">
+            <div class="line2"> HTML5 </div>
+            <div class="line2"> CSS 3</div>
+            <div class="line2"> Bootstrap</div>
+            <div class="line2"> JavaScript</div>
+            <div class="line2"> MySql </div>
+        </div>
+    </div>
+    <!--Project Section -->
+    <div id="Project">
+        <h1 class="h">Project</h1>
+    </div>
+
+    <!--Contact-->
+    <div id="Contacts">
+        <h1 class="h">Contacts</h1>
+        <div style="display: flex; margin-top: 10%;">
+            <div class="mob"><img src="./images/phone.png">
+                <h4>Phone</43>
+                    <h6 style="color: #7a7a7a;">9755882791</h6>
+            </div>
+            <div class="mobright"><img src="./images/mail.png">
+                <h4>Email</43>
+                    <h6 style="color:#61ce70;">divyalalji456@gmail.com</h6>
+            </div>
+        </div>
+        <!--<div class="mob" style=" margin-left:51%;margin-top: 10%; margin-bottom: 10%;"> <img src="./images/address.png">
+            <h4>Address</43>
+                <h6 style="color: #7a7a7a;">C.T.O Bairagarh, Bhopal(M.P)</h6>
+        </div>-->
+        <div style="display: flex; margin-top: 10%; margin-bottom: 10%;">
+            <div class="mob"><img src="./images/address.png">
+                <h4>Phone</43>
+                    <h6 style="color: #7a7a7a;">C.T.O Bairagarh, Bhopal(M.P)</h6>
+            </div>
+            <div class="mobright" style="height: 5.7%;"><img src="./images/freelancer.png">
+                <h4>Email</43>
+                    <h6 style="color:#7a7a7a;">Freelance Available</h6>
+            </div>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <!--Left Side footer-->
+    <footer class="footer">
+        <div class="copy">
+            <p>E: divyalalji456@gmail.com</p>
+            <p>M: 9755882791</p>
+        </div>
+
+        <!--right Side footer-->
+        <div class="foo">
+            <div class="foo1">
+                Follow Me
+            </div>
+            <div>
+                <a target="_blank" href="https://www.linkedin.com/in/divya-lalji-a88b13208"><i class="fa-brands fa-linkedin fa-beat"></i></a>
+                <a target="_blank" href="https://wa.me/+919755882791"><i class="fa-brands fa-whatsapp fa-beat"></i></a>
+                <a target="_blank" href="https://www.facebook.com/divyalalji9?mibextid=ZbWKwL"><i class="fa-brands fa-square-facebook fa-beat"></i></a>
+                <a target="_blank" href="https://instagram.com/_di_vi_09?igshid=ZGUzMzM3NWJiOQ=="><i class="fa-brands fa-square-instagram fa-beat"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    var TxtType = function (el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function () {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+            this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+            this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+            delta = this.period;
+            this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+            this.isDeleting = false;
+            this.loopNum++;
+            delta = 500;
+        }
+
+        setTimeout(function () {
+            that.tick();
+        }, delta);
+    };
+
+    window.onload = function () {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i = 0; i < elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+                new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+        document.body.appendChild(css);
+    };
+</script>
+
+
+</html>
