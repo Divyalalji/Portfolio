@@ -3,777 +3,175 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/5e93b8cccf.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="./images/portfolio.ico">
+    <title>Flip-Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <style>
         body {
-            margin: 0%;
+            background-color: #123f52dc;
+            
         }
 
-        .header-section {
-            height: 200px;
-
-            padding-top: 10px;
-
-        }
-        .navbar-light .navbar-toggler-icon{
-            background-image: url(./images/menu\ bar.png) ;
+        .card {
+            height: 25rem;
+            width: 25rem;
         }
 
-        .header {
-            margin-left: 200px;
+        .flipcard {
+            background-color: transparent;
+            height: 25rem;
+            width: 25rem;
+            perspective: 1000px;
         }
 
-        .spc {
-            font-size: 1.4rem;
-            font-weight: 500;
-        }
-
-        .spc:hover {
-            color: white;
-        }
-
-
-        .navbar-light .navbar-nav .nav-link {
-            color: whitesmoke;
-
-        }
-
-        .nav-link {
-            color: whitesmoke;
-        }
-
-        .bd {
-            background-image: url(./images/background\ pic.png);
-            position: absolute;
-            z-index: 1;
-        }
-
-        .me {
-            margin-left: 50%;
-        }
-
-        .me1 {
-            margin-left: 8%;
-        }
-
-        .txt {
-            width: 100px;
-            height: 50px;
-            color: white;
-            font-size: 20px;
-            font-weight: 500;
-            line-height: 2;
-            text-align: center;
-            transition: transform 250ms;
-        }
-
-        .txt:hover {
-            transform: translateY(-10px);
-            color: white !important;
-        }
-
-        @media (min-width: 480px) {
-            .txt {
-                width: 100px;
-                height: 50px;
-                color: white;
-                font-weight: 500;
-                line-height: 2;
-                text-align: center;
-                transition: transform 250ms;
-            }
-
-        }
-
-        @media (min-width: 360px) {
-            .pc{
-                margin-left: -1%;
-            }
-            .con {
-                color: white;
-                margin-top: 13%;
-            }
-        }
-
-        @media (min-width: 480px) {
-            .line1 {
-                margin-left: 32.7%;
-                width: 99%;
-                margin-top: 14%;
-                background-color: #000;
-                color: rgb(236, 12, 12);
-            }
-        }
-
-        .pc {
-            height: 43%;
-            margin-left: 17%;
-            margin-top: -11%;
-        }
-
-        .con {
-            color: white;
-            margin-top: 10%;
-            margin-left: 3%;
-            font-size: 1.35vw;
-        }
-
-        .ty {
-            margin-left: 4%;
-            font-size: 4.5vw;
-            text-decoration: none;
-            color: #fff;
-            padding-top: 10em;
-        }
-
-        .ty:hover {
-            color: #61ce70;
-        }
-
-        .h {
-            font-size: 90px;
-            color: white;
-            font-weight: 600;
-            margin-top: 5%;
-            margin-left: 45%;
-            text-decoration: underline;
-        }
-
-        .spn {
-            color: #61ce70;
-            font-weight: bold;
-        }
-
-        .line {
-            border: 1px;
-            border-color: #7a7a7a;
-            border-style: solid;
-            text-align: center;
-            padding: 5%;
-        }
-
-        .line1 {
-            margin-left: 23.8%;
-            width: 72%;
-            margin-top: 9%;
-            background-color: #000;
-            color: white;
-        }
-
-        .btn {
-            border: 2px;
-            border-color: #61ce70;
-            border-style: solid;
-            padding-left: 5%;
-            padding-right: 5%;
-            color: #61ce70;
-            background-color: #000;
-            margin-top: 5%;
-        }
-
-        .btn:hover {
-            color: #000;
-            background-color: #61ce70;
-        }
-
-        .edu {
-            border: 1px;
-            background-color: #000;
-            border-style: solid;
-            margin-left: 35%;
-            border-color: #7a7a7a;
-            padding: 2.5em;
-            width: 50%;
-            text-align: center;
-            margin-top: 5em;
-        }
-
-        .year {
-            color: #61ce70;
-            font-size: 1em;
-            font-weight: bold;
-        }
-
-        .fon {
-            color: white;
-            font-size: 1.2em;
-        }
-
-        .line3 {
-            border: 1px;
-            border-color: #7a7a7a;
-            border-style: solid;
-            margin-top: 9%;
-            margin-left: 24%;
-            width: 71.8%;
-            padding: 5%;
-            background-color: #000;
-
-        }
-
-        .line2 {
-            text-align: left;
-            padding-top: 2%;
-            color: white;
-            font-size: 1.2em;
-
-        }
-
-        .progress {
-            height: 0.4em
-        }
-
-        .progress-bar {
-            background-color: #61ce70;
-        }
-
-        .mob {
-            border: 1px;
-            border-style: solid;
-            border-color: #7a7a7a;
-            text-align: center;
-            padding: 5%;
-            margin-left: 23.5%;
-            width: 30%;
-            background-color: #000;
-        }
-
-        .mobright {
-            position: absolute;
-            border: 1px;
-            border-style: solid;
-            border-color: #7a7a7a;
-            text-align: center;
-            padding: 5%;
-            margin-left: 66%;
-            width: 30%;
-            background-color: #000;
-        }
-
-        .footer {
-            padding: 0;
-            position: fixed;
-            bottom: 50px;
-            left: 50px;
-            right: 50px;
-            width: auto;
-            height: 1px;
-            z-index: 99;
-        }
-
-        .footer .copy {
-            margin: 2px 0 0;
-            color: #fff;
-            font-size: 14px;
-            line-height: 2;
-            position: absolute;
-            left: 0;
-            bottom: 0;
-        }
-
-        .footer .foo {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            float: right;
-            width: 24px;
-        }
-
-        .foo1 {
-            padding-right: 75px;
-            position: absolute;
-            bottom: 100%;
-            right: 0;
-            color: #bbb;
-            font-size: 1.2rem;
-            line-height: 24px;
-            height: 24px;
-            white-space: nowrap;
-            transform-origin: 100% 0;
-            text-align: right;
-            transform: rotate(90deg);
-            -webkit-transform: rotate(90deg);
-        }
-
-        .fa-brands {
-            color: #fff;
-        }
-
-        .fa-brands:hover {
-            color: #61ce70;
-        }
-
-        .at-item {
-            width: 50%;
-            height: 100vh;
-            background-color: rgb(27, 28, 29);
-            overflow: hidden;
-            animation: myanim 3s ease 1s reverse forwards;
-
-        }
-
-        @keyframes myanim {
-            0% {
-                opacity: 0;
-                transform: rotateY(-100deg);
-                transform-origin: right;
-            }
-
-            100% {
-                opacity: 1;
-                transform: rotateY(0);
-                transform-origin: right;
-            }
-        }
-
-        .abc {
-            animation: moves 2s alternate-reverse;
+        .flipinner {
             position: relative;
-
-
-
-        }
-
-        @keyframes moves {
-
-            from {
-                left: 0%;
-            }
-
-            to {
-                left: 10%;
-            }
-        }
-        .code{
-            border: 4px;
-            border-radius: 50%;
-            border-style: solid;
-            padding: 6%;
-            /* border-color: linear-gradient(to rotate, rgb(84, 206, 27) 85%, rgb(207, 26, 26) 15%); */
-           
-        }
-        .code1{
-            border: 4px;
-            border-radius: 50%;
-            border-style: solid;
-            padding: 6%;
-            margin-left: 8%;
-            /* background: linear-gradient( to rotateY rgb(84, 206, 27) 80%, rgb(207, 26, 26) 20%); */
-        }
-        .cod{
-            margin-left: 8%;
-        }
-        .container{
             width: 100%;
-            height: auto;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
-        .ani{
-             width:100vw; 
-             position: absolute;
-              z-index:12 ; 
-              display:flex; 
-              flex-direction: row;
-              margin-top: -10%;
+
+        .flipcard:hover .flipinner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+        }
+
+        .flip-card-back {
+            transform: rotateY(180deg);
         }
     </style>
 </head>
 
-<body class="bd">
-    
-    <!--this is navbar section-->
-    <div class="header-section" style="position: fixed;">
-        <nav class="navbar navbar-expand-lg navbar-light bg-transparent header ">
-            <div class="container-fluid">
-                <a class="nav-link navbar-nav navbar-light spc txt" href="home.html#" style=" font-size: 106%; font-family: 'Montserrat',sans-serif;
-                font-weight: 600; margin-left: -15%;">Divya Lalji</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse clr" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 header me">
-                        <li class="nav-item">
-                            <a class="nav-link spc txt" href="#Resume">Resume</a>
-                        </li>
-                        <li class="nav-item me1">
-                            <a class="nav-link spc txt" href="#Education">Education</a>
-                        </li>
-                        <li class="nav-item me1">
-                            <a class="nav-link spc txt" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item me1">
-                            <a class="nav-link spc txt" href="#Project.html">Project</a>
-                        </li>
-                        <li class="nav-item me1">
-                            <a class="nav-link spc txt" href="#Contacts">Contacts</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- this is background animation -->
-    
-    <!--written content-->
-
-    <div class="container">
-        <div class="ani">
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-        </div>
-        <div style="display: flex; margin-top: 16%;">
-            
-            <div class="col-md-6"> <img class="pc" src="./images/profile pic.png"></div>
-            <div class="con col-md-6"> Hello,I'm <strong style="color: #61ce70;"> Divya Lalji </strong>
-                <p style="text-decoration: underline;">Full Stack Developer</p>
-                <p> Well-qualified Full stack developer familiar with wide range of Programming Utilities and languages,
-                    Knowledgeable of back-end And Front-end Development Requirements.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!--This is Typewriter-->
-
-    <h1 style="margin-top: -54%;">
-        <a href="#" class="typewrite ty" data-period="2000"
-            data-type='[ "I Code Cool Websites.", "I Develop Website Designs", "I am Programmer.", "I Love to Develop Designs" ]'>
-            <span class="wrap"></span>
-        </a>
-    </h1>
-
-    <!--Resume-->
-
-    <div id="Resume">
-        <!--background animation-->
-        <div style=" width:100vw; position: absolute; z-index:12 ; display:flex; flex-direction: row;">
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-        </div>
-        <div class="abc"><!--Animation-->
-            <h1 class="h">Resume</h1>
-        </div>
-        <!--Introduction-->
-        <div class="line1">
-            <div class="line">Hello! I'm <span style="color: #61ce70;">Divya Lalji</span> . I have rich experience in web site design and building.
-                <!-- 1st flex-->
-                <div style="display: flex; margin-top: 5%;">
-                    <div style="text-align: center;"><span class="spn">Age:</span> 24
+<body>
+    <div class="container-fluid ">
+        <h1 class="text-light display-2 text-decoration-underline fw-normal text-center"> Latest Packages</h1>
+        <div class="row d-flex flex-wrap gap-5 ms-4 mt-5">
+            <!-- 1st card-->
+            <div class="flipcard">
+                <div class="flipinner">
+                    <!--Front-card-->
+                    <div class="card col-3 bg-secondary flip-card-front">
+                        <div class="d-flex justify-content-center">
+                            <img src="./images/user.png">
+                        </div>
+                        <h3 class="display-4 text-light pt-5" >Package-1</h3>
                     </div>
-                    <div style="margin-left: 26%;"><span class="spn">Residence:</span>
-                        Bhopal (M.P)</div>
-                </div>
-                <!-- 2nd flex-->
-                <div style="display: flex; margin-top: 2%;">
-                    <div style="text-align: center;"><span class="spn">Mobile
-                            No.:</span>
-                        9755882791 </div>
-                    <div style="margin-left: 10%;"><span class="spn">Email:</span>
-                        divyalalji456@gmail.com</div>
-                </div>
-                <button class="btn">Download CV</button>
-            </div>
-        </div>
-    </div>
-
-    <!--Education Section -->
-    <div id="Education">
-        <div style=" width:100vw; position: absolute; z-index:12 ; display:flex; flex-direction: row;">
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-        </div>
-        <div class="abc"><!--Animation-->
-            <h1 class="h" style="margin-top: 10%;">Education</h1>
-        </div>
-        <!--M.tech-->
-        <div class="edu">
-            <div class="year">2021-2023</div>
-            <div class="fon">Master of Technology in Computer Science</div>
-            <div class="fon">Technocrats Institute of Technology-Excellence</div>
-            <div class="fon">Bhopal (M.P)</div>
-        </div>
-        <!--B.tech-->
-        <div class="edu">
-            <div class="year">2017-2020</div>
-            <div class="fon">Bachelor of Engineering in Information Technology</div>
-            <div class="fon">University Institute of Technology RGPV</div>
-            <div class="fon">Bhopal (M.P)</div>
-        </div>
-        <!--Diploma of Engineering-->
-        <div class="edu">
-            <div class="year">2014-2017</div>
-            <div class="fon">Diploma of Engineering</div>
-            <div class="fon">S. V. Polytechnic College</div>
-            <div class="fon">Bhopal (M.P)</div>
-        </div>
-    </div>
-    <!-- Skills Section -->
-    <div id="skills">
-        <div style=" width:100vw; position: absolute; z-index:12 ; display:flex; flex-direction: row;">
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-        </div>
-        <div class="abc"><!--Animation-->
-            <h1 class="h" style="margin-left: 6.5em;">Skills</h1>
-        </div>
-        <!--Design Skills-->
-        <div class="line3">
-            <h3 style="color: white; text-decoration: underline;">Design Skills</h3>
-            <div class="line2"> Web Design
-                <p>
-                    <span style="float: right;"> &nbsp; 92%</span>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 92%"
-                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                </p>
-            </div>
-            <div class="line2">Graphic Design
-                <p>
-                    <span style="float: right;"> &nbsp; 75%</span>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%"
-                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                </p>
-            </div>
-            <div class="line2"> HTML5/CSS3
-                <p>
-                    <span style="float: right;"> &nbsp; 95%</span>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 95%"
-                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                </p>
-            </div>
-            <div class="line2"> JavaScript
-                <p>
-                    <span style="float: right;"> &nbsp; 80%</span>
-                <div class="progress">
-                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 80%"
-                        aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-                </p>
-            </div>
-        </div>
-    </div>
-    <!--Language Skills-->
-    <div class="line3">
-        <h3 style="color: white; text-decoration: underline;">Language Skills</h3>
-        <div class="line2"> English
-            <p>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/greydot.png"></span>
-                <span><img src="./images/greydot.png"></span>
-                <span><img src="./images/greydot.png"></span>
-            </p>
-        </div>
-        <div class="line2">Hindi
-            <p>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/dot.png"></span>
-                <span><img src="./images/greydot.png"></span>
-            </p>
-        </div>
-    </div>
-    <!--Coding Skills-->
-    <div class="line3">
-        <h3 style="color: white; text-decoration: underline;">Coding Skills</h3>
-        <div class="line2"> 
-            <div style="display: flex; flex-direction: row; justify-content: center; margin-top: 5%;">
-            <div class="code"> 95%</div>
-            
-            <div class="code1"> 90% </div>
-            <div class="code1"> 80% </div>
-            <div class="code1"> 80% </div>
-                 </div>
-                 <div style="display: flex; flex-direction: row; margin-top: 4%;">
-                    <div style="margin-left: 7%;">HTML / CSS
+                    <!--Back-card-->
+                    <div class="card bg-success size flip-card-back">
+                        <div class="d-flex justify-content-center">
+                            <!--Package Card-->
+                            <div class="card col-3 border-1" data-bs-theme="light">
+                                <div class="card-header"> <strong>Free</strong>
+                                    <p class="card-text">For Freelancers </p>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title"> $0</h2>
+                                    <ul style="list-style-image: url(./images/tick.png);">
+                                        <li>Single User</li>
+                                        <li>10 Download Per Month</li>
+                                        <li>Faster Files</li>
+                                        <li>25 Custom Packs</li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-dark mb-3">Subcribe</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="cod" style="margin-left: 11%;">Bootstrap</div>
-                    <div class="cod" style="margin-left: 13%;">JavaScript</div>
-                    <div class="cod" style="margin-left: 14%;">MySql</div>
-                 </div>
-        </div>
+                </div>
+            </div>
+            <!-- 2nd card-->
+            <div class="flipcard">
+                <div class="flipinner">
+                    <!--Front-card-->
+                    <div class="card col-3 bg-secondary flip-card-front">
+                        <div class="d-flex justify-content-center">
+                            <img src="./images/user.png">
+                        </div>
+                        <h3 class="display-4 text-light pt-5" >Package-2</h3>
+                    </div>
+                    <!--Back-card-->
+                    <div class="card bg-success size flip-card-back">
+                        <div class="d-flex justify-content-center">
+                            <!--Package Card-->
+                            <div class="card  col-3 " data-bs-theme="dark">
+                                <div class="card-header"> <strong>Free</strong>
+                                    <p class="card-text">For Freelancers </p>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title"> $10</h2>
+                                    <ul style="list-style-image: url(./images/tick.png);">
+                                        <li>unlimited users</li>
+                                        <li>unlimited downloads</li>
+                                        <li>Fully-editable files</li>
+                                        <li>200+ custom packs</li>
+                                    </ul>
+
+
+                                </div>
+                                <button class="btn btn-light mb-3">Subcribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 3rd card-->
+            <div class="flipcard">
+                <div class="flipinner">
+                    <!--Front-card-->
+                    <div class="card col-3 bg-secondary  flip-card-front">
+                        <div class="d-flex justify-content-center">
+                            <img src="./images/user.png">
+                        </div>
+                        <h3 class="display-4 text-light pt-5" >Package-3</h3>
+                    </div>
+                    <!--Back-card-->
+                    <div class="card bg-success size flip-card-back">
+                        <div class="d-flex justify-content-center">
+                            <!--Package Card-->
+                            <div class="card col-3 border-1" data-bs-theme="light">
+                                <div class="card-header"> <strong>Free</strong>
+                                    <p class="card-text">For Freelancers </p>
+                                </div>
+                                <div class="card-body">
+                                    <h2 class="card-title"> $30</h2>
+                                    <ul style="list-style-image: url(./images/tick.png);">
+                                        <li>unlimited users</li>
+                                        <li>unlimited downloads</li>
+                                        <li>Fully-editable files</li>
+                                        <li>500+ custom packs</li>
+                                    </ul>
+                                </div>
+                                <button class="btn btn-dark mb-3">Subcribe</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
         </div>
     </div>
 
-    
-
-    <!--Project Section -->
-    <div id="Project">
-        <div style=" width:100vw; position: absolute; z-index:12 ; display:flex; flex-direction: row;">
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-        </div>
-        <h1 class="h">Project</h1>
-
-    </div>
-    <!--Contact Section-->
-    <div id="Contacts">
-        <div style=" width:100vw; position: absolute; z-index:12 ; display:flex; flex-direction: row;">
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-            <div class=" at-item"></div>
-        </div>
-        <div class="abc"><!--Animation-->
-            <h1 class="h">Contacts</h1>
-        </div>
-        <div style="display: flex; margin-top: 10%;">
-
-            <div class="mob"><img src="./images/phone.png">
-                <h4 style="color: navajowhite;">Phone</h4>
-                <h6 style="color: #7a7a7a;">9755882791</h6>
-            </div>
-
-            <!---->
-            <div class="mobright"><img src="./images/mail.png">
-                <h4 style="color: navajowhite;">Email</h4>
-                <h6 style="color:#61ce70;">divyalalji456@gmail.com</h6>
-            </div>
-        </div>
-        <!---->
-        <div style="display: flex; margin-top: 10%; margin-bottom: 10%;">
-            <div class="mob"><img src="./images/address.png">
-                <h4 style="color: navajowhite;">Phone</h4>
-                <h6 style="color: #7a7a7a;">C.T.O Bairagarh, Bhopal(M.P)</h6>
-            </div>
-            <div class="mobright" style="height: 5%;"><img src="./images/freelancer.png">
-
-                <h6 style="color:#7a7a7a;">Freelance Available</h6>
-            </div>
-        </div>
-    </div>
-    
-
-    <!-- Fixed Footer-->
-    <!--Left Side footer-->
-    <footer class="footer">
-        <div class="copy">
-            <p>E: divyalalji456@gmail.com</p>
-            <p>M: 9755882791</p>
-        </div>
-
-        <!--right Side footer-->
-        <div class="foo">
-            <div class="foo1">
-                Follow Me
-            </div>
-            <hr st>
-            <div>
-                <a target="_blank" href="https://www.linkedin.com/in/divya-lalji-a88b13208"><i
-                        class="fa-brands fa-linkedin fa-beat"></i></a>
-                <a target="_blank" href="https://wa.me/+919755882791"><i class="fa-brands fa-whatsapp fa-beat"></i></a>
-                <a target="_blank" href="https://www.facebook.com/divyalalji9?mibextid=ZbWKwL"><i
-                        class="fa-brands fa-square-facebook fa-beat"></i></a>
-                <a target="_blank" href="https://instagram.com/_di_vi_09?igshid=ZGUzMzM3NWJiOQ=="><i
-                        class="fa-brands fa-square-instagram fa-beat"></i></a>
-            </div>
-        </div>
-    </footer>
-
-
-
-
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
 </body>
-<script>
-    var TxtType = function (el, toRotate, period) {
-        this.toRotate = toRotate;
-        this.el = el;
-        this.loopNum = 0;
-        this.period = parseInt(period, 10) || 2000;
-        this.txt = '';
-        this.tick();
-        this.isDeleting = false;
-    };
-
-    TxtType.prototype.tick = function () {
-        var i = this.loopNum % this.toRotate.length;
-        var fullTxt = this.toRotate[i];
-
-        if (this.isDeleting) {
-            this.txt = fullTxt.substring(0, this.txt.length - 1);
-        } else {
-            this.txt = fullTxt.substring(0, this.txt.length + 1);
-        }
-
-        this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
-
-        var that = this;
-        var delta = 200 - Math.random() * 100;
-
-        if (this.isDeleting) { delta /= 2; }
-
-        if (!this.isDeleting && this.txt === fullTxt) {
-            delta = this.period;
-            this.isDeleting = true;
-        } else if (this.isDeleting && this.txt === '') {
-            this.isDeleting = false;
-            this.loopNum++;
-            delta = 500;
-        }
-
-        setTimeout(function () {
-            that.tick();
-        }, delta);
-    };
-
-    window.onload = function () {
-        var elements = document.getElementsByClassName('typewrite');
-        for (var i = 0; i < elements.length; i++) {
-            var toRotate = elements[i].getAttribute('data-type');
-            var period = elements[i].getAttribute('data-period');
-            if (toRotate) {
-                new TxtType(elements[i], JSON.parse(toRotate), period);
-            }
-        }
-        // INJECT CSS
-        var css = document.createElement("style");
-        css.type = "text/css";
-        css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-        document.body.appendChild(css);
-    };
-</script>
 
 </html>
